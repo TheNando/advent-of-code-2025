@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Deno: Launch",
+      "type": "node", // Deno debugging uses the Node.js debugger protocol
+      "request": "launch",
+      "program": "${workspaceFolder}/main.ts", // Replace with your main file
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "deno",
+      "runtimeArgs": [
+        "run",
+        "--inspect-wait" // Important for attaching the debugger
+        // "--allow-net", // Add any necessary permissions
+        // "--allow-read"
+      ],
+      "outputCapture": "std" // To see console output in the debug console
+    }
+  ]
+}
