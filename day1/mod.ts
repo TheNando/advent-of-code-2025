@@ -1,6 +1,4 @@
-function readInput(): string[] {
-  return Deno.readTextFileSync("day1.input").split("\n");
-}
+const DIAL_START = 50;
 
 /** Return the dial position after applying the instruction */
 function passwordMethodA(instructions: string[], dial: number): number {
@@ -75,10 +73,8 @@ function passwordMethodB(instructions: string[], dial: number): number {
   return zero_count;
 }
 
-const DIAL_START = 50;
-
 export function getPassword(method = "a") {
-  const instructions = readInput();
+  const instructions = Deno.readTextFileSync("./day1/input").split("\n");
 
   if (method === "a") {
     console.log(

@@ -1,12 +1,15 @@
-import { getPassword } from "./day1.ts";
+import { getPassword } from "./day1/mod.ts";
+import { sumInvalidIds } from "./day2/mod.ts";
 
-export function main(day: string = "1b") {
+export function main(day: string = "2b") {
   if (day === "1a") {
     getPassword("a");
-  }
-
-  if (day === "1b") {
+  } else if (day === "1b") {
     getPassword("b");
+  } else if (day === "2a") {
+    sumInvalidIds();
+  } else if (day === "2b") {
+    sumInvalidIds(true);
   }
 }
 
